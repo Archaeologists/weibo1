@@ -22,7 +22,7 @@ class UsersController extends Controller
 
          //限流一个小时呢只能提交10此请求
 
-         $this->middleware('thorttle:10,60',[
+         $this->middleware('throttle:10,60',[
             'only'=>['store']
          ]);
     }
